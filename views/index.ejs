@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Stressed At Penn</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+		<!-- AJAX -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<h2 align="center">Stressed@Penn</h2>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<img src="ben.JPG" style="width:100%">
+				</div>
+				<div class="col-lg-4">
+					<form role="form" action="/submitPhoto" method="post" enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="exampleInputFile">If you feel stressed, upload an image that you think represents stress. Uploads are completely anonymous.</label>
+							<input type="file" id="selectedPhoto" name="displayImage">
+							<p class="help-block">.jpg or .png images only, please :)</p>
+							<input type="submit" value="Submit">
+						</div>
+						<!-- <button type="submit" class="btn btn-default" id="submit">Submit</button> -->
+					</form>
+					<br><br>
+					<h1 align="center">212</h1> 
+					<h4>other people are also stressed. View some of their images <a href="">here</a>.</h4>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
