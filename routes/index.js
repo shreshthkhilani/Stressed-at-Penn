@@ -43,6 +43,10 @@ exports.index = function(req, res) {
 };
 
 exports.submitPhoto = function(req, res) {
+	if (req.files.displayImage == undefined) {
+		res.redirect("/");
+		return;
+	}
 	//console.log(req);
 	//console.log(req.files);
 	var fs = require('fs');
@@ -144,3 +148,107 @@ exports.view = function(req, res) {
 	
 	res.render('view', { title: t });
 };
+
+exports.getGrid = function(req, res) {
+	var n = 16;
+	var inx = photos.inx;
+	var real = inx < n ? inx : n;
+	console.log(real);
+
+	var returnData = [];
+	var count = real;
+	console.log(count);
+	for (var i = photos.inx - 1; i >= photos.inx - real; i--) {
+		//if (i < 0) continue;
+		console.log("==============================");
+		console.log(i);
+		console.log("==============================");
+		photos.get(i.toString(), function(err, data) {
+			if (err) {
+				console.log("getGrid error 1");
+			}
+			else {
+				console.log(data);
+				var json_data = JSON.parse(data);
+				returnData.push(json_data.url);
+				count--;
+				if(count == 0) {
+					console.log(returnData);
+				    res.send(returnData);
+				    return;
+				}
+			}
+		});
+	}
+};
+
+exports.getCount = function(req, res) {
+	res.send({"count": photos.inx});
+};
+
+exports.admin = function(req, res) {
+	var t = '';
+	
+	res.render('admin', { title: t });
+};
+
+exports.home = function(req, res) {
+	var t = '';
+
+	if (!req.session.login) {
+		res.redirect("/admin");
+		return;
+	}
+	
+	res.render('home', { title: t });
+};
+
+exports.login = function(req, res) {
+	console.log(req.body);
+	var user = req.body.user;
+	var pw = req.body.pw;
+	admins.exists(user, function(err, data) {
+		if (err) {
+			console.log("login");
+		}
+		else {
+			if (data == false) {
+				res.send({"success": false, "msg": "Wrong username!"});
+			}
+			else {
+				admins.get(user, function(err2, data2) {
+					if (err2) {
+						console.log("login 2");
+					}
+					else {
+						var json_data = JSON.parse(data2);
+						if (pw = json_data.pw) {
+							req.session.login = true;
+							req.session.user = user;
+							res.send({"success": true});
+						}
+						else {
+							res.send({"success": false, "msg": "Wrong password!"});
+						}
+					}
+				});
+			}
+		}
+	});
+}
+
+exports.logout = function(req, res) {
+	req.session.login = false;
+	req.session.user = null;
+	res.send({});
+}
+
+exports.verifyPhoto = function(req, res) {
+	res.send({"success": false});
+}
+
+exports.getQueue = function(req, res) {
+	res.send({"success": false});
+	// Count pending
+	// Loop over all, add the pending urls and ids until pending becomes 0
+}

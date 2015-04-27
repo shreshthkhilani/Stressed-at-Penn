@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Stressed At Penn | Admin</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+		<!-- AJAX -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+	<script>
+		$(document).ready(function() {
+			$("button#submit").click(function() {
+				//alert("click");
+				var un = $("#un").val();
+				var pw = $("#pw").val();
+				if (un === "" || pw === "") {
+					return;
+				}
+				var json_data = {
+					"user" : un,
+					"pw" : pw
+				};
+				$.post("/login", json_data, function(data) {
+					if (data.success) {
+						window.location = "/home";
+					}
+					else {
+						$("#msg").text(data.msg);
+					}
+				});
+			});
+			
+		}); 
+	</script>
+	<body>
+		<h2 align="center">Stressed@Penn</h2>
+		<br><br>
+		<form>
+			<div class="form-group" align="center">
+				<label for="username">Username</label>
+				<input type="text" id="un" name="uname">
+				<br><br>
+				<label for="username">Password</label>
+				<input type="password" id="pw" name="pword">
+				
+			</div>
+		</form>
+		<div align="center">
+			<button class="btn btn-sm" id="submit">Sign In</button>
+		
+			
+			<br><span style="color:red;" id="msg"></span>
+			</div>
+			<!-- <button type="submit" class="btn btn-default" id="submit">Submit</button> -->
+		
+	</body>
+</html>

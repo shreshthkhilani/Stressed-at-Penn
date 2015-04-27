@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Stressed At Penn | View</title>
+		<title>Stressed At Penn | Home</title>
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -16,29 +16,19 @@
 	</head>
 	<script>
 		$(document).ready(function() {
-			$.get("/getGrid", {}, function(data) {
-				console.log(data);
-				$("#gallery").text("");
-				for (var i = 0; i < data.length; i++) {
-					$("#gallery").append('<div class="col-lg-2" align="center" style="overflow:hidden;height:180px;padding-top:20px;">' + 
-						'<img src="' + data[i] + '" style="height:100%;">' 
-						+ '</div>');
-				}
-				$.get("/getCount", {}, function(data) {
-					$("#count").text(data.count);
+			$("button#logout").click(function() {
+				$.post("/logout", {}, function(data) {
+					window.location = "/admin";
 				});
 			});
-		});
+		}); 
 	</script>
 	<body>
 		<h2 align="center">Stressed@Penn</h2>
-		<h3 align="center">VIEW</h3><br>
-		<h1 id="count" align="center"></h1> <br>
+		<h3 align="center">Pending Approval:</h3>
 		<br>
-		<div class="container">
-			<div class="row" id="gallery">
-
-			</div>
+		<div align="center">
+			<button id="logout" class="btn btn-sm">Log Out</button>
 		</div>
 	</body>
 </html>

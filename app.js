@@ -24,7 +24,8 @@ app.use(express.static(__dirname + '/views/js'));
 
 app.use(cookieParser());
 app.use(session({
-	secret: "thisISaSeCrEt"
+	secret: "thisISaSeCrEt",
+	login: false
 	}));
 
 /////////////////
@@ -42,35 +43,21 @@ photos.init(function() {
 	routes.init(admins, hours, photos,
 		function() {
 		
-		// Routes for Login/Signup page
 		app.get( '/', routes.index );
 		app.get( '/index.html', routes.index );
-
-		app.get( '/view', routes.view );
-
 		app.post( '/submitPhoto', routes.submitPhoto );
 
-		/*// Wrong login info page
-		app.get( '/login', routes.login );
+		app.get( '/view', routes.view );
+		app.get( '/getGrid', routes.getGrid );
+		app.get( '/getCount', routes.getCount );
 
-		// Logout route
-		app.get( '/logout', routes.logout );
+		app.get( '/admin', routes.admin );
+		app.post( '/login', routes.login );
 
-		// Profile page
-		app.get( '/profile', routes.profile );
-		app.get( '/getProfile', routes.getProfile );
-		app.get( '/getTopFriends', routes.getTopFriends );
-		app.get( '/getPosts', routes.getPosts );
-		app.post( '/newStatus', routes.newStatus );
-		app.get( '/photos', routes.photos );
-		app.get( '/getAllPhotos', routes.getAllPhotos );
-		app.get( '/friends', routes.friends );
-		app.get( '/about', routes.about );
-		app.post( '/postLike', routes.postLike );
-		app.post( '/postProfileUpdate', routes.postProfileUpdate );
-		app.post( '/cover', routes.postCover );
-		app.post( '/propic', routes.postPP );*/
-
+		app.get( '/home', routes.home );
+		app.get( '/getQueue', routes.getQueue );
+		app.post( '/logout', routes.logout );
+		app.post( '/verifyPhoto', routes.verifyPhoto );
 
 		/////////////////////
 		
