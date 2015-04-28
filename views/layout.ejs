@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stressed At Penn | <%= title %></title>
+
+		<!-- OG -->
+		<meta property="og:title" content="Are you stressed?">
+		<meta property="og:site_name" content="Stressed At Penn">
+		<meta property="og:url" content="http://stressedatpenn.com/">
+		<meta property="og:image" content="http://stressedatpenn.com/views/images/stripes.jpg">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="What images do you and others at Penn associate with stress?">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="stripes-favicon.png">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+		<!-- AJAX -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+		<!-- My CSS -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<% include header %>
+		<div class="content">
+			<%- body %>
+		</div>
+		<% include footer %>
+	</body>	
+</html>

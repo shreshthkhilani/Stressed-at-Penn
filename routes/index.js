@@ -11,16 +11,17 @@
 var admins;
 var photos;
 var hours;
+var count;
 
 var shortId = require('shortid');
 
 // We export the init() function to initialize
 // our KVS values
-exports.init = function(ad,hr,ph,callback) {
+exports.init = function(ad,hr,ph,ct,callback) {
 	admins = ad;
 	photos = ph;
 	hours = hr;
-
+	count = ct;
 	callback();
 };
 
@@ -32,7 +33,7 @@ async = require("async");
 
 
 exports.index = function(req, res) {
-	var t = '';
+	var t = 'Submit';
 	
 	if (req.session.login) {
 		res.redirect("/home");
@@ -129,12 +130,28 @@ exports.submitPhoto = function(req, res) {
 				console.log("Error photo upload 1");
 			}
 			else {
-				hours.put(hour, pId, function(err2, data2) {
+				hours.addToSet(hour, pId, function(err2, data2) {
 					if (err2) {
-						console.log("Error photo upload 2")
+						console.log("Error photo upload 2");
 					}
 					else {
-						res.redirect("/view");
+						count.get("pending",function(err3, data3) {
+							if (err3) {
+								console.log("Error photo upload 3");
+							}
+							else {
+								var new_data = JSON.parse(data3);
+								new_data.num = new_data.num + 1;
+								count.put("pending",JSON.stringify(new_data),function(err4,data4) {
+									if (err4) {
+										console.log("Error photo upload 4");
+									}
+									else {
+										res.redirect("/view");
+									}
+								});
+							}
+						});
 					}
 				});
 			}
@@ -144,42 +161,54 @@ exports.submitPhoto = function(req, res) {
 };
 
 exports.view = function(req, res) {
-	var t = '';
+	var t = 'View';
 	
 	res.render('view', { title: t });
 };
 
 exports.getGrid = function(req, res) {
-	var n = 16;
-	var inx = photos.inx;
-	var real = inx < n ? inx : n;
-	console.log(real);
-
-	var returnData = [];
-	var count = real;
-	console.log(count);
-	for (var i = photos.inx - 1; i >= photos.inx - real; i--) {
-		//if (i < 0) continue;
-		console.log("==============================");
-		console.log(i);
-		console.log("==============================");
-		photos.get(i.toString(), function(err, data) {
-			if (err) {
-				console.log("getGrid error 1");
+	var n = 12;
+	count.get("approved", function(err2, data2) {
+		if (err2) {
+			console.log("getGrid error 2");
+		}
+		else {
+			var new_data = JSON.parse(data2);
+			console.log(new_data);
+			var inx = new_data.num; //this should be number of '1's
+			var real = inx < n ? inx : n;
+			if (real == 0) {
+				res.send([]);
 			}
-			else {
-				console.log(data);
-				var json_data = JSON.parse(data);
-				returnData.push(json_data.url);
-				count--;
-				if(count == 0) {
-					console.log(returnData);
-				    res.send(returnData);
-				    return;
-				}
+			var returnData = [];
+			var count = real;
+			console.log(count);
+			for (var i = photos.inx - 1; i >= 0; i--) {
+				//if (i < 0) continue;
+				console.log("==============================");
+				console.log(i);
+				console.log("==============================");
+				photos.get(i.toString(), function(err, data) {
+					if (err) {
+						console.log("getGrid error 1");
+					}
+					else {
+						console.log(data);
+						var json_data = JSON.parse(data);
+						if (json_data.approved == 1) {
+							returnData.push(json_data.url);
+							count--;
+							if(count == 0) {
+								console.log(returnData);
+							    res.send(returnData);
+							    return;
+							}
+						}
+					}
+				});
 			}
-		});
-	}
+		}
+	});
 };
 
 exports.getCount = function(req, res) {
@@ -187,13 +216,13 @@ exports.getCount = function(req, res) {
 };
 
 exports.admin = function(req, res) {
-	var t = '';
+	var t = 'Administrator';
 	
 	res.render('admin', { title: t });
 };
 
 exports.home = function(req, res) {
-	var t = '';
+	var t = 'Home';
 
 	if (!req.session.login) {
 		res.redirect("/admin");
@@ -235,20 +264,74 @@ exports.login = function(req, res) {
 			}
 		}
 	});
-}
+};
 
 exports.logout = function(req, res) {
 	req.session.login = false;
 	req.session.user = null;
 	res.send({});
-}
+};
 
 exports.verifyPhoto = function(req, res) {
-	res.send({"success": false});
-}
+	var pId = req.body.id;
+	var approved = req.body.approved;
+	var user = req.body.user;
+
+	photos.get(pId, function(err,data) {
+		if (err) {
+			console.log("verifyPhoto");
+		}
+		else {
+			var json_data = JSON.parse(data);
+			json_data.approved = approved;
+			json_data.approvedBy = user;
+			photos.put(pId, JSON.stringify(json_data), function(err2,data2) {
+				if (err2) {
+					console.log("verifyPhoto 2");
+				}
+				else {
+					if (approved == -1) {
+						// Rejected
+						count.get("rejected",function(err3,data3) {
+							if (err3) {
+								console.log("err3");
+							}
+							else {
+								var new_data = JSON.parse(data3);
+								data3.num = data3.num + 1;
+								count.put("rejected",JSON.stringify(new_data),function(err4,data4) {
+									res.send({"success": true});
+								});
+							}
+						});
+					}
+					else if (approved == 1) {
+						// Accepted
+						count.get("approved",function(err3,data3) {
+							if (err3) {
+								console.log("err3");
+							}
+							else {
+								var new_data = JSON.parse(data3);
+								data3.num = data3.num + 1;
+								count.put("approved",JSON.stringify(new_data),function(err4,data4) {
+									res.send({"success": true});
+								});
+							}
+						});
+					}
+				}
+			});
+		}
+	});
+};
 
 exports.getQueue = function(req, res) {
 	res.send({"success": false});
-	// Count pending
+	// Find # of '0's
 	// Loop over all, add the pending urls and ids until pending becomes 0
-}
+};
+
+exports.loggedIn = function(req, res) {
+	res.send({"loggedIn": req.session.login, "user": req.session.user});
+};

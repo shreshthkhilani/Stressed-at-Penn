@@ -1,0 +1,33 @@
+<div class="footer">
+	<div class="container">
+		<div class="row" style="padding-bottom:8px;">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" align="left">
+				<a href="/admin" hidden id="if-lo">Admin Login</a>
+				<div hidden style="display:inline block;" id="if-li">Logged in as <span id="username"></span>. <a href="#" id="logout">Logout</a>.</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" align="right">
+				&copy; 2015 - FNAR 264 Final Project
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+		$.get("/loggedIn", {}, function(data) {
+			var log = data.loggedIn;
+			if (!log) {
+				$("#if-lo").show();
+			}
+			else {
+				$("#username").text(data.user);
+				$("#if-li").show();
+			}
+		});
+		$("a#logout").click(function(e) {
+			e.preventDefault();
+			$.post("/logout", {}, function(data) {
+				window.location = "/admin";
+			});
+		});
+	});
+</script>

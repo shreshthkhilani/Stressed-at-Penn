@@ -1,34 +1,4 @@
-<html>
-	<head>
-		<title>Stressed At Penn | Home</title>
-
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-		<!-- AJAX -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	</head>
-	<script>
-		$(document).ready(function() {
-			$("button#logout").click(function() {
-				$.post("/logout", {}, function(data) {
-					window.location = "/admin";
-				});
-			});
-		}); 
-	</script>
-	<body>
-		<h2 align="center">Stressed@Penn</h2>
-		<h3 align="center">Pending Approval:</h3>
-		<br>
-		<div align="center">
-			<button id="logout" class="btn btn-sm">Log Out</button>
-		</div>
-	</body>
-</html>
+<% layout( 'layout' ) -%>
+<br>
+<h4 align="center">Photos pending approval:</h4>
+<br>

@@ -35,12 +35,14 @@ var aws = require("./keyvaluestore.js");
 var admins = new aws('admins');
 var hours = new aws('hours');
 var photos = new aws('photos');
+var count = new aws('count');
 
 admins.init(function() {
 hours.init(function() {
 photos.init(function() {
+count.init(function() {
 
-	routes.init(admins, hours, photos,
+	routes.init(admins, hours, photos, count,
 		function() {
 		
 		app.get( '/', routes.index );
@@ -59,12 +61,15 @@ photos.init(function() {
 		app.post( '/logout', routes.logout );
 		app.post( '/verifyPhoto', routes.verifyPhoto );
 
+		app.get( '/loggedIn', routes.loggedIn );
+
 		/////////////////////
 		
 		http.createServer( app ).listen( app.get( 'port' ), function(){
 			  console.log( 'Open browser to http://localhost:' + app.get( 'port' ));
 			} );
 	});
+});
 });
 });
 });

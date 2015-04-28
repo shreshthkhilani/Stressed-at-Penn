@@ -1,44 +1,29 @@
-<html>
-	<head>
-		<title>Stressed At Penn | View</title>
+<% layout( 'layout' ) -%>
+<br>
+<div class="comtainer" align="center">
+	<h3 align="center"><span id="count"></span> <small>people are also stressed</small></h3>
+</div>
 
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<div class="container">
+	<div class="row" id="gallery">
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	</div>
+</div>
+<br>
 
-		<!-- AJAX -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	</head>
-	<script>
-		$(document).ready(function() {
-			$.get("/getGrid", {}, function(data) {
-				console.log(data);
-				$("#gallery").text("");
-				for (var i = 0; i < data.length; i++) {
-					$("#gallery").append('<div class="col-lg-2" align="center" style="overflow:hidden;height:180px;padding-top:20px;">' + 
-						'<img src="' + data[i] + '" style="height:100%;">' 
-						+ '</div>');
-				}
-				$.get("/getCount", {}, function(data) {
-					$("#count").text(data.count);
-				});
+<script>
+	$(document).ready(function() {
+		$.get("/getGrid", {}, function(data) {
+			console.log(data);
+			$("#gallery").text("");
+			for (var i = 0; i < data.length; i++) {
+				$("#gallery").append('<div class="col-lg-2" align="center" style="overflow:hidden;height:180px;padding-top:20px;">' + 
+					'<img src="' + data[i] + '" style="height:100%;">' 
+					+ '</div>');
+			}
+			$.get("/getCount", {}, function(data) {
+				$("#count").text(data.count);
 			});
 		});
-	</script>
-	<body>
-		<h2 align="center">Stressed@Penn</h2>
-		<h3 align="center">VIEW</h3><br>
-		<h1 id="count" align="center"></h1> <br>
-		<br>
-		<div class="container">
-			<div class="row" id="gallery">
-
-			</div>
-		</div>
-	</body>
-</html>
+	});
+</script>
