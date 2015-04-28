@@ -1,0 +1,169 @@
+Tue, 28 Apr 2015 05:24:08 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 05:24:08 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 11 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+Open browser to http://localhost:8088
+13
+13
+Tue, 28 Apr 2015 06:09:39 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 06:09:39 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 11 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EACCES
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1020:19)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1135:5)
+    at /home/ubuntu/Stressed-at-Penn/app.js:68:28
+    at Object.exports.init (/home/ubuntu/Stressed-at-Penn/routes/index.js:25:2)
+    at /home/ubuntu/Stressed-at-Penn/app.js:45:9
+    at Response.<anonymous> (/home/ubuntu/Stressed-at-Penn/keyvaluestore.js:118:5)
+    at Request.<anonymous> (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/request.js:350:18)
+    at Request.callListeners (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/sequential_executor.js:100:18)
+Tue, 28 Apr 2015 06:11:47 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 06:11:47 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 11 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+Open browser to http://localhost:8080
+13
+progress 0 16384 49057
+progress 0 32768 49057
+progress 0 49057 49057
+progress 0 49057 49057
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/96345df0-ed6d-11e4-b0c2-2fcdc2af181f',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 06:12:45 GMT+0000 (UTC),
+  pId: '13' }
+13
+14
+14
+14
+14
+14
+14
+{ user: 'shreshth', pw: 'abc123' }
+{ num: 4 }
+4
+==============================
+13
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/96345df0-ed6d-11e4-b0c2-2fcdc2af181f","approvedBy":"","timestamp":"2015-04-28T06:12:45.745Z","pId":"13"}
+==============================
+12
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/a6f189b0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"","timestamp":"2015-04-28T05:01:38.815Z","pId":"12"}
+==============================
+11
+==============================
+==============================
+10
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/1283cbd0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"shreshth","timestamp":"2015-04-28T04:57:30.771Z","pId":"10"}
+==============================
+9
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/7bd1ea50-ed62-11e4-b377-8b48ac233784","approvedBy":"shreshth","timestamp":"2015-04-28T04:53:17.970Z","pId":"9"}
+==============================
+8
+==============================
+{"pId":8,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/d576d730-ed41-11e4-af11-594cb2bc4ccc","approvedBy":"","timestamp":"2015-04-28T00:59:34.431Z"}
+==============================
+7
+==============================
+{"pId":7,"approved":1,"url":"http://vignette3.wikia.nocookie.net/sonicpokemon/images/b/b2/Psyduck_AG_anime.png/revision/latest?cb=20130626041931","approvedBy":"shreshth","timestamp":"2015-04-27T21:04:31.999Z"}
+==============================
+6
+==============================
+{"pId":6,"approved":-1,"url":"http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2014/04/10/john-oliver-.jpg?itok=B4yY9xmZ","approvedBy":"shreshth","timestamp":"2015-04-27T20:17:45.542Z"}
+==============================
+5
+==============================
+{"pId":5,"approved":1,"url":"http://xaharts.org/funny/i/gitopuss/github-octocat_yes-we-code.jpg","approvedBy":"shreshth","timestamp":"2015-04-27T18:48:27.937Z"}
+==============================
+4
+==============================
+{"pId":4,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/b9118b50-ed0d-11e4-8dc0-27ac6747da15","approvedBy":"shreshth","timestamp":"2015-04-27T18:46:32.539Z"}
+==============================
+3
+==============================
+{"pId":3,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/83492050-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:33:27.558Z"}
+==============================
+2
+==============================
+{"pId":2,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/6eb073a0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:32:52.737Z"}
+==============================
+1
+==============================
+{"pId":1,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/3885b8d0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:31:22.141Z"}
+==============================
+0
+==============================
+{"pId":0,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/f750cdf0-ecf8-11e4-b3c0-85e8a25ba6d1","approvedBy":"shreshth","timestamp":"2015-04-27T16:17:57.894Z"}
+null
+14
+14
+14
+14
+14
+14
+14

@@ -11,7 +11,7 @@ var async = require('async');
 var multer  = require('multer');
 
 app.use(multer({dest: './uploads/', includeEmptyFields: true}));
-app.set('port', process.env.PORT || 8088);
+app.set('port', process.env.PORT || 8080);
 app.engine('ejs', engine);
 app.set('views', path.join( __dirname, 'views'));
 app.set('view engine', 'ejs');
