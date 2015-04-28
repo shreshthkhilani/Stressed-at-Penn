@@ -167,3 +167,1067 @@ null
 14
 14
 14
+Tue, 28 Apr 2015 06:41:55 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 06:41:55 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 12 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1039:14)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1135:5)
+    at /home/ubuntu/Stressed-at-Penn/app.js:68:28
+    at Object.exports.init (/home/ubuntu/Stressed-at-Penn/routes/index.js:25:2)
+    at /home/ubuntu/Stressed-at-Penn/app.js:45:9
+    at Response.<anonymous> (/home/ubuntu/Stressed-at-Penn/keyvaluestore.js:118:5)
+    at Request.<anonymous> (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/request.js:350:18)
+    at Request.callListeners (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/sequential_executor.js:100:18)
+Tue, 28 Apr 2015 06:42:36 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 06:42:36 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 12 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1039:14)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1135:5)
+    at /home/ubuntu/Stressed-at-Penn/app.js:68:28
+    at Object.exports.init (/home/ubuntu/Stressed-at-Penn/routes/index.js:25:2)
+    at /home/ubuntu/Stressed-at-Penn/app.js:45:9
+    at Response.<anonymous> (/home/ubuntu/Stressed-at-Penn/keyvaluestore.js:118:5)
+    at Request.<anonymous> (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/request.js:350:18)
+    at Request.callListeners (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/sequential_executor.js:100:18)
+Tue, 28 Apr 2015 06:44:52 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 06:44:52 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 12 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1039:14)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1135:5)
+    at /home/ubuntu/Stressed-at-Penn/app.js:68:28
+    at Object.exports.init (/home/ubuntu/Stressed-at-Penn/routes/index.js:25:2)
+    at /home/ubuntu/Stressed-at-Penn/app.js:45:9
+    at Response.<anonymous> (/home/ubuntu/Stressed-at-Penn/keyvaluestore.js:118:5)
+    at Request.<anonymous> (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/request.js:350:18)
+    at Request.callListeners (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/sequential_executor.js:100:18)
+14
+14
+14
+14
+progress 0 16384 280350
+progress 0 32768 280350
+progress 0 49152 280350
+progress 0 65536 280350
+progress 0 81920 280350
+progress 0 98304 280350
+progress 0 114688 280350
+progress 0 131072 280350
+progress 0 147456 280350
+progress 0 163840 280350
+progress 0 180224 280350
+progress 0 196608 280350
+progress 0 212992 280350
+progress 0 229376 280350
+progress 0 245760 280350
+progress 0 262144 280350
+progress 0 278528 280350
+progress 0 280350 280350
+progress 0 280350 280350
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/7b432f20-ed73-11e4-b0c2-2fcdc2af181f',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 06:54:57 GMT+0000 (UTC),
+  pId: '14' }
+14
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+{ user: 'xyz', pw: 'zxv' }
+{ user: 'shre.shrex@gmail.com', pw: 'hello' }
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+15
+progress 0 16384 86227
+progress 0 32768 86227
+progress 0 49152 86227
+progress 0 65536 86227
+progress 0 81920 86227
+progress 0 86227 86227
+progress 0 86227 86227
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/1011d010-edd4-11e4-b0c2-2fcdc2af181f',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 18:26:18 GMT+0000 (UTC),
+  pId: '15' }
+15
+16
+16
+16
+16
+16
+progress 0 16384 361791
+progress 0 32768 361791
+progress 0 49152 361791
+progress 0 65536 361791
+progress 0 81920 361791
+progress 0 98304 361791
+progress 0 114688 361791
+progress 0 131072 361791
+progress 0 147456 361791
+progress 0 163840 361791
+progress 0 180224 361791
+progress 0 196608 361791
+progress 0 212992 361791
+progress 0 229376 361791
+progress 0 245760 361791
+progress 0 262144 361791
+progress 0 278528 361791
+progress 0 294912 361791
+progress 0 311296 361791
+progress 0 327680 361791
+progress 0 344064 361791
+progress 0 360448 361791
+progress 0 361791 361791
+progress 0 361791 361791
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/532d12b0-edd4-11e4-b0c2-2fcdc2af181f',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 18:28:11 GMT+0000 (UTC),
+  pId: '16' }
+16
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+{ user: 'gabe', pw: 'abc123' }
+17
+{ user: 'shreshth', pw: 'abc123' }
+{ num: 7 }
+7
+==============================
+16
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/532d12b0-edd4-11e4-b0c2-2fcdc2af181f","approvedBy":"","timestamp":"2015-04-28T18:28:11.328Z","pId":"16"}
+==============================
+15
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/1011d010-edd4-11e4-b0c2-2fcdc2af181f","approvedBy":"","timestamp":"2015-04-28T18:26:18.732Z","pId":"15"}
+==============================
+14
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/7b432f20-ed73-11e4-b0c2-2fcdc2af181f","approvedBy":"","timestamp":"2015-04-28T06:54:57.377Z","pId":"14"}
+==============================
+13
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/96345df0-ed6d-11e4-b0c2-2fcdc2af181f","approvedBy":"","timestamp":"2015-04-28T06:12:45.745Z","pId":"13"}
+==============================
+12
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/a6f189b0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"","timestamp":"2015-04-28T05:01:38.815Z","pId":"12"}
+==============================
+11
+==============================
+==============================
+10
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/1283cbd0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"shreshth","timestamp":"2015-04-28T04:57:30.771Z","pId":"10"}
+==============================
+9
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/7bd1ea50-ed62-11e4-b377-8b48ac233784","approvedBy":"shreshth","timestamp":"2015-04-28T04:53:17.970Z","pId":"9"}
+==============================
+8
+==============================
+{"pId":8,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/d576d730-ed41-11e4-af11-594cb2bc4ccc","approvedBy":"","timestamp":"2015-04-28T00:59:34.431Z"}
+==============================
+7
+==============================
+{"pId":7,"approved":1,"url":"http://vignette3.wikia.nocookie.net/sonicpokemon/images/b/b2/Psyduck_AG_anime.png/revision/latest?cb=20130626041931","approvedBy":"shreshth","timestamp":"2015-04-27T21:04:31.999Z"}
+==============================
+6
+==============================
+{"pId":6,"approved":-1,"url":"http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2014/04/10/john-oliver-.jpg?itok=B4yY9xmZ","approvedBy":"shreshth","timestamp":"2015-04-27T20:17:45.542Z"}
+==============================
+5
+==============================
+{"pId":5,"approved":1,"url":"http://xaharts.org/funny/i/gitopuss/github-octocat_yes-we-code.jpg","approvedBy":"shreshth","timestamp":"2015-04-27T18:48:27.937Z"}
+==============================
+4
+==============================
+{"pId":4,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/b9118b50-ed0d-11e4-8dc0-27ac6747da15","approvedBy":"shreshth","timestamp":"2015-04-27T18:46:32.539Z"}
+==============================
+3
+==============================
+{"pId":3,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/83492050-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:33:27.558Z"}
+==============================
+2
+==============================
+{"pId":2,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/6eb073a0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:32:52.737Z"}
+==============================
+1
+==============================
+{"pId":1,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/3885b8d0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:31:22.141Z"}
+==============================
+0
+==============================
+{"pId":0,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/f750cdf0-ecf8-11e4-b3c0-85e8a25ba6d1","approvedBy":"shreshth","timestamp":"2015-04-27T16:17:57.894Z"}
+null
+17
+17
+17
+17
+17
+17
+Tue, 28 Apr 2015 18:34:31 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 18:34:31 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 15 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1039:14)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1135:5)
+    at /home/ubuntu/Stressed-at-Penn/app.js:68:28
+    at Object.exports.init (/home/ubuntu/Stressed-at-Penn/routes/index.js:25:2)
+    at /home/ubuntu/Stressed-at-Penn/app.js:45:9
+    at Response.<anonymous> (/home/ubuntu/Stressed-at-Penn/keyvaluestore.js:118:5)
+    at Request.<anonymous> (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/request.js:350:18)
+    at Request.callListeners (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/sequential_executor.js:100:18)
+17
+17
+17
+17
+17
+17
+17
+Tue, 28 Apr 2015 18:37:30 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 18:37:30 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 15 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1039:14)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1135:5)
+    at /home/ubuntu/Stressed-at-Penn/app.js:68:28
+    at Object.exports.init (/home/ubuntu/Stressed-at-Penn/routes/index.js:25:2)
+    at /home/ubuntu/Stressed-at-Penn/app.js:45:9
+    at Response.<anonymous> (/home/ubuntu/Stressed-at-Penn/keyvaluestore.js:118:5)
+    at Request.<anonymous> (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/request.js:350:18)
+    at Request.callListeners (/home/ubuntu/Stressed-at-Penn/node_modules/aws-sdk/lib/sequential_executor.js:100:18)
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+Tue, 28 Apr 2015 18:49:47 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 18:49:47 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 15 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+Open browser to http://localhost:8080
+13
+13
+13
+Tue, 28 Apr 2015 18:52:33 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 18:52:33 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 15 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+Open browser to http://localhost:8080
+13
+13
+{ user: 'shreshth', pw: 'abc123' }
+{ num: 7 }
+7
+==============================
+12
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/a6f189b0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"","timestamp":"2015-04-28T05:01:38.815Z","pId":"12"}
+==============================
+11
+==============================
+==============================
+10
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/1283cbd0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"shreshth","timestamp":"2015-04-28T04:57:30.771Z","pId":"10"}
+==============================
+9
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/7bd1ea50-ed62-11e4-b377-8b48ac233784","approvedBy":"shreshth","timestamp":"2015-04-28T04:53:17.970Z","pId":"9"}
+==============================
+8
+==============================
+{"pId":8,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/d576d730-ed41-11e4-af11-594cb2bc4ccc","approvedBy":"","timestamp":"2015-04-28T00:59:34.431Z"}
+==============================
+7
+==============================
+{"pId":7,"approved":1,"url":"http://vignette3.wikia.nocookie.net/sonicpokemon/images/b/b2/Psyduck_AG_anime.png/revision/latest?cb=20130626041931","approvedBy":"shreshth","timestamp":"2015-04-27T21:04:31.999Z"}
+==============================
+6
+==============================
+{"pId":6,"approved":-1,"url":"http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2014/04/10/john-oliver-.jpg?itok=B4yY9xmZ","approvedBy":"shreshth","timestamp":"2015-04-27T20:17:45.542Z"}
+==============================
+5
+==============================
+{"pId":5,"approved":1,"url":"http://xaharts.org/funny/i/gitopuss/github-octocat_yes-we-code.jpg","approvedBy":"shreshth","timestamp":"2015-04-27T18:48:27.937Z"}
+==============================
+4
+==============================
+{"pId":4,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/b9118b50-ed0d-11e4-8dc0-27ac6747da15","approvedBy":"shreshth","timestamp":"2015-04-27T18:46:32.539Z"}
+==============================
+3
+==============================
+{"pId":3,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/83492050-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:33:27.558Z"}
+==============================
+2
+==============================
+{"pId":2,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/6eb073a0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:32:52.737Z"}
+==============================
+1
+==============================
+{"pId":1,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/3885b8d0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:31:22.141Z"}
+==============================
+0
+==============================
+{"pId":0,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/f750cdf0-ecf8-11e4-b3c0-85e8a25ba6d1","approvedBy":"shreshth","timestamp":"2015-04-27T16:17:57.894Z"}
+null
+13
+13
+Tue, 28 Apr 2015 18:56:28 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 18:56:28 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 15 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+Open browser to http://localhost:8080
+Tue, 28 Apr 2015 18:57:40 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 18:57:40 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 15 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+Open browser to http://localhost:8080
+13
+13
+Tue, 28 Apr 2015 19:02:01 GMT express-session deprecated undefined resave option; provide resave option at app.js:26:9
+Tue, 28 Apr 2015 19:02:01 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:26:9
+Connecting to DynamoDB for table admins
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table admins
+Found 1 indexed entries in admins
+Connecting to DynamoDB for table hours
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table hours
+Found 15 indexed entries in hours
+Connecting to DynamoDB for table photos
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table photos
+Found 13 indexed entries in photos
+Connecting to DynamoDB for table count
+Connected to AWS DynamoDB
+Tables in DynamoDB: admins,count,hours,photos
+Looking for table count
+Found 3 indexed entries in count
+Open browser to http://localhost:8080
+13
+13
+13
+13
+13
+13
+13
+progress 0 16384 49057
+progress 0 32768 49057
+progress 0 49057 49057
+progress 0 49057 49057
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/4df05640-edd9-11e4-9f9a-9d8734bbf67a',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 19:03:50 GMT+0000 (UTC),
+  pId: '13' }
+13
+14
+14
+{ user: 'shreshth', pw: 'abc123' }
+{ num: 8 }
+8
+==============================
+13
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/4df05640-edd9-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T19:03:50.098Z","pId":"13"}
+==============================
+12
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/a6f189b0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"","timestamp":"2015-04-28T05:01:38.815Z","pId":"12"}
+==============================
+11
+==============================
+==============================
+10
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/1283cbd0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"shreshth","timestamp":"2015-04-28T04:57:30.771Z","pId":"10"}
+==============================
+9
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/7bd1ea50-ed62-11e4-b377-8b48ac233784","approvedBy":"shreshth","timestamp":"2015-04-28T04:53:17.970Z","pId":"9"}
+==============================
+8
+==============================
+{"pId":8,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/d576d730-ed41-11e4-af11-594cb2bc4ccc","approvedBy":"","timestamp":"2015-04-28T00:59:34.431Z"}
+==============================
+7
+==============================
+{"pId":7,"approved":1,"url":"http://vignette3.wikia.nocookie.net/sonicpokemon/images/b/b2/Psyduck_AG_anime.png/revision/latest?cb=20130626041931","approvedBy":"shreshth","timestamp":"2015-04-27T21:04:31.999Z"}
+==============================
+6
+==============================
+{"pId":6,"approved":-1,"url":"http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2014/04/10/john-oliver-.jpg?itok=B4yY9xmZ","approvedBy":"shreshth","timestamp":"2015-04-27T20:17:45.542Z"}
+==============================
+5
+==============================
+{"pId":5,"approved":1,"url":"http://xaharts.org/funny/i/gitopuss/github-octocat_yes-we-code.jpg","approvedBy":"shreshth","timestamp":"2015-04-27T18:48:27.937Z"}
+==============================
+4
+==============================
+{"pId":4,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/b9118b50-ed0d-11e4-8dc0-27ac6747da15","approvedBy":"shreshth","timestamp":"2015-04-27T18:46:32.539Z"}
+==============================
+3
+==============================
+{"pId":3,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/83492050-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:33:27.558Z"}
+==============================
+2
+==============================
+{"pId":2,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/6eb073a0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:32:52.737Z"}
+==============================
+1
+==============================
+{"pId":1,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/3885b8d0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:31:22.141Z"}
+==============================
+0
+==============================
+{"pId":0,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/f750cdf0-ecf8-11e4-b3c0-85e8a25ba6d1","approvedBy":"shreshth","timestamp":"2015-04-27T16:17:57.894Z"}
+null
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+progress 0 16384 49429
+progress 0 32768 49429
+progress 0 49152 49429
+progress 0 49429 49429
+progress 0 49429 49429
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/346c8730-edec-11e4-9f9a-9d8734bbf67a',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 21:19:07 GMT+0000 (UTC),
+  pId: '14' }
+14
+15
+15
+15
+15
+15
+progress 0 16384 171468
+progress 0 32768 171468
+progress 0 49152 171468
+progress 0 65536 171468
+progress 0 81920 171468
+progress 0 98304 171468
+progress 0 114688 171468
+progress 0 131072 171468
+progress 0 147456 171468
+progress 0 163840 171468
+progress 0 171468 171468
+progress 0 171468 171468
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/b0f63df0-edec-11e4-9f9a-9d8734bbf67a',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 21:22:36 GMT+0000 (UTC),
+  pId: '15' }
+15
+16
+16
+progress 0 16384 238055
+progress 0 32768 238055
+progress 0 49152 238055
+progress 0 65536 238055
+progress 0 81920 238055
+progress 0 98304 238055
+progress 0 114688 238055
+progress 0 131072 238055
+progress 0 147456 238055
+progress 0 163840 238055
+progress 0 180224 238055
+progress 0 196608 238055
+progress 0 212992 238055
+progress 0 229376 238055
+progress 0 238055 238055
+progress 0 238055 238055
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/d9816c40-edec-11e4-9f9a-9d8734bbf67a',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 21:23:44 GMT+0000 (UTC),
+  pId: '16' }
+16
+17
+17
+progress 0 16384 93889
+progress 0 32768 93889
+progress 0 49152 93889
+progress 0 65536 93889
+progress 0 81920 93889
+progress 0 93889 93889
+progress 0 93889 93889
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/f7714d60-edec-11e4-9f9a-9d8734bbf67a',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 21:24:34 GMT+0000 (UTC),
+  pId: '17' }
+17
+18
+18
+18
+18
+18
+18
+progress 0 16384 103567
+progress 0 32768 103567
+progress 0 49152 103567
+progress 0 65536 103567
+progress 0 81920 103567
+progress 0 98304 103567
+progress 0 103567 103567
+progress 0 103567 103567
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/2166e120-eded-11e4-9f9a-9d8734bbf67a',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 21:25:45 GMT+0000 (UTC),
+  pId: '18' }
+18
+19
+19
+progress 0 16384 149844
+progress 0 32768 149844
+progress 0 49152 149844
+progress 0 65536 149844
+progress 0 81920 149844
+progress 0 98304 149844
+progress 0 114688 149844
+progress 0 131072 149844
+progress 0 147456 149844
+progress 0 149844 149844
+progress 0 149844 149844
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/3da0fbf0-eded-11e4-9f9a-9d8734bbf67a',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 21:26:32 GMT+0000 (UTC),
+  pId: '19' }
+19
+20
+20
+20
+progress 0 16384 621188
+progress 0 32768 621188
+progress 0 49152 621188
+progress 0 65536 621188
+progress 0 81920 621188
+progress 0 98304 621188
+progress 0 114688 621188
+progress 0 131072 621188
+progress 0 147456 621188
+progress 0 163840 621188
+progress 0 180224 621188
+progress 0 196608 621188
+progress 0 212992 621188
+progress 0 229376 621188
+progress 0 245760 621188
+progress 0 262144 621188
+progress 0 278528 621188
+progress 0 294912 621188
+progress 0 311296 621188
+progress 0 327680 621188
+progress 0 344064 621188
+progress 0 360448 621188
+progress 0 376832 621188
+progress 0 393216 621188
+progress 0 409600 621188
+progress 0 425984 621188
+progress 0 442368 621188
+progress 0 458752 621188
+progress 0 475136 621188
+progress 0 491520 621188
+progress 0 507904 621188
+progress 0 524288 621188
+progress 0 540672 621188
+progress 0 557056 621188
+progress 0 573440 621188
+progress 0 589824 621188
+progress 0 606208 621188
+progress 0 621188 621188
+progress 0 621188 621188
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/7b7a9260-eded-11e4-9f9a-9d8734bbf67a',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 21:28:16 GMT+0000 (UTC),
+  pId: '20' }
+20
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+progress 0 16384 21256
+progress 0 21256 21256
+progress 0 21256 21256
+done uploading
+{ approved: 0,
+  url: 'https://s3.amazonaws.com/stressed-at-penn/images/ab290f10-edf6-11e4-9f9a-9d8734bbf67a',
+  approvedBy: '',
+  timestamp: Tue Apr 28 2015 22:34:01 GMT+0000 (UTC),
+  pId: '21' }
+21
+22
+22
+{ user: 'shreshth', pw: 'abc123' }
+{ num: 16 }
+16
+==============================
+21
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/ab290f10-edf6-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T22:34:01.798Z","pId":"21"}
+==============================
+20
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/7b7a9260-eded-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T21:28:16.367Z","pId":"20"}
+==============================
+19
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/3da0fbf0-eded-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T21:26:32.649Z","pId":"19"}
+==============================
+18
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/2166e120-eded-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T21:25:45.248Z","pId":"18"}
+==============================
+17
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/f7714d60-edec-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T21:24:34.828Z","pId":"17"}
+==============================
+16
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/d9816c40-edec-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T21:23:44.593Z","pId":"16"}
+==============================
+15
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/b0f63df0-edec-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T21:22:36.691Z","pId":"15"}
+==============================
+14
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/346c8730-edec-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T21:19:07.636Z","pId":"14"}
+==============================
+13
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/4df05640-edd9-11e4-9f9a-9d8734bbf67a","approvedBy":"","timestamp":"2015-04-28T19:03:50.098Z","pId":"13"}
+==============================
+12
+==============================
+{"approved":0,"url":"https://s3.amazonaws.com/stressed-at-penn/images/a6f189b0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"","timestamp":"2015-04-28T05:01:38.815Z","pId":"12"}
+==============================
+11
+==============================
+==============================
+10
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/1283cbd0-ed63-11e4-a2c8-3d65e20c2c07","approvedBy":"shreshth","timestamp":"2015-04-28T04:57:30.771Z","pId":"10"}
+==============================
+9
+==============================
+{"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/7bd1ea50-ed62-11e4-b377-8b48ac233784","approvedBy":"shreshth","timestamp":"2015-04-28T04:53:17.970Z","pId":"9"}
+==============================
+8
+==============================
+{"pId":8,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/d576d730-ed41-11e4-af11-594cb2bc4ccc","approvedBy":"","timestamp":"2015-04-28T00:59:34.431Z"}
+==============================
+7
+==============================
+{"pId":7,"approved":1,"url":"http://vignette3.wikia.nocookie.net/sonicpokemon/images/b/b2/Psyduck_AG_anime.png/revision/latest?cb=20130626041931","approvedBy":"shreshth","timestamp":"2015-04-27T21:04:31.999Z"}
+==============================
+6
+==============================
+{"pId":6,"approved":-1,"url":"http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2014/04/10/john-oliver-.jpg?itok=B4yY9xmZ","approvedBy":"shreshth","timestamp":"2015-04-27T20:17:45.542Z"}
+==============================
+5
+==============================
+{"pId":5,"approved":1,"url":"http://xaharts.org/funny/i/gitopuss/github-octocat_yes-we-code.jpg","approvedBy":"shreshth","timestamp":"2015-04-27T18:48:27.937Z"}
+==============================
+4
+==============================
+{"pId":4,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/b9118b50-ed0d-11e4-8dc0-27ac6747da15","approvedBy":"shreshth","timestamp":"2015-04-27T18:46:32.539Z"}
+==============================
+3
+==============================
+{"pId":3,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/83492050-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:33:27.558Z"}
+==============================
+2
+==============================
+{"pId":2,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/6eb073a0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:32:52.737Z"}
+==============================
+1
+==============================
+{"pId":1,"approved":-1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/3885b8d0-ed03-11e4-b097-0be7d0d4776f","approvedBy":"shreshth","timestamp":"2015-04-27T17:31:22.141Z"}
+==============================
+0
+==============================
+{"pId":0,"approved":1,"url":"https://s3.amazonaws.com/stressed-at-penn/images/f750cdf0-ecf8-11e4-b3c0-85e8a25ba6d1","approvedBy":"shreshth","timestamp":"2015-04-27T16:17:57.894Z"}
+null
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
