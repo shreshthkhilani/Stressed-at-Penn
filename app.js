@@ -72,6 +72,13 @@ rejected.init(function() {
 		http.createServer( app ).listen( app.get( 'port' ), function(){
 			  console.log( 'Open browser to http://localhost:' + app.get( 'port' ));
 			} );
+		process.on('uncaughtException', function (err) {
+		  console.log('Caught exception: ' + err);
+		});
+
+		setTimeout(function () {
+		  console.log('This will still run.');
+		}, 500);
 	});
 });
 });
