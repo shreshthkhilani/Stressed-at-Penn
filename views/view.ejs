@@ -1,33 +1,33 @@
 <% layout( 'layout' ) -%>
 <br>
 <div class="comtainer" align="center">
-	<h3 align="center"><span id="count"></span> <small>people are also stressed</small></h3>
+	<h3 align="center"><span id="count">0</span> <small>people are also stressed</small></h3>
 </div>
 
 <div class="container">
 	<div class="row" id="gallery">
-
+		<div align="center"><h4>Loading...</h4></div>
 	</div>
 </div>
 <br>
 
 <script>
 	$(document).ready(function() {
-		$.get("/getGrid", {}, function(data) {
-			
-			data = data.sort(function(a,b) { 
-				return new Date(b.timestamp) - new Date(a.timestamp);
-			});
-			console.log(data);
-			$("#gallery").text("");
-			for (var i = 0; i < data.length; i++) {
-				var current = new Date(data[i].timestamp);
-				$("#gallery").append('<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="padding-right:4px;padding-left:4px;"> <div align="center" style="overflow:hidden;height:168px;padding-top:8px;">' + 
-					'<img src="' + data[i].url + '" style="height:100%;"><br>' 
-					+ '</div></div>');
-			}
-			$.get("/getCount", {}, function(data) {
-				$("#count").text(data.count);
+		$.get("/getCount", {}, function(data) {
+			$("#count").text(data.count);
+			$.get("/getGrid", {}, function(data) {
+				
+				data = data.sort(function(a,b) { 
+					return new Date(b.timestamp) - new Date(a.timestamp);
+				});
+				console.log(data);
+				$("#gallery").text("");
+				for (var i = 0; i < data.length; i++) {
+					var current = new Date(data[i].timestamp);
+					$("#gallery").append('<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="padding-right:4px;padding-left:4px;"> <div align="center" style="overflow:hidden;height:168px;padding-top:8px;">' + 
+						'<img src="' + data[i].url + '" style="height:100%;"><br>' 
+						+ '</div></div>');
+				}
 			});
 		});
 	});

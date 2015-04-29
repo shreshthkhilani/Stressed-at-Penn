@@ -154,18 +154,19 @@ exports.view = function(req, res) {
 exports.getGrid = function(req, res) {
 	var n = 24;
 	var inx = n;
+	var returnDataPre = []
 	var returnData = [];
 	var count = inx;
 	var i = photos.inx - 1;
 
-	/*var arr = Array.apply(null, {length: i}).map(Number.call, Number);
-
-	async.filter(arr,
+	var arr = Array.apply(null, {length: i}).map(Number.call, Number);
+	console.log(arr.length);
+	async.each(arr,
 		function(item,callback) {
 			photos.get(item.toString(), function(err,data) {
 				if (err) {
 					console.log("Error in getQueue");
-					callback(false);
+					callback();
 				}
 				else {
 					if (data != null) {
@@ -176,32 +177,60 @@ exports.getGrid = function(req, res) {
 							}
 							else {
 								if (!data2) {
-									callback(true);
+									returnDataPre.push(parseInt(item));
+									callback();
 								}
 								else {
-									callback(false);
+									//console.log(item);
+									callback();
 								}
 							}
 						});
 					}
 					else {
-						callback(false);
+						callback();
 					}
 				}
 			});
 		},
 		function() {
-			console.log(arr);
+			returnDataPre = returnDataPre.sort(function(a,b){return b-a;});
+			console.log(returnDataPre);
+			i = 0;
+			async.until(
+				function() {
+					return returnData.length == n;
+				},
+				function(callback) {
+					var current = returnDataPre[i];
+					i++;
+					console.log(current);
+					photos.get(current.toString(), function(err,data) {
+						if (err) {
+							console.log("Error here");
+							callback();
+						}
+						else {
+							returnData.push(JSON.parse(data));
+							callback();
+						}
+					});
+				},
+				function(err) {
+					res.send(returnData);
+					return;
+				} 
+			);
 		}
 	);
-	console.log(arr);
-	async.until(
+
+	/*async.until(
 		function() {
 			return returnData.length == n;
 		}, 
 
 		function (callback) {
-			console.log(i);
+			//console.log(i);
 			photos.get(i.toString(), function(err,data) {
 				if (err) {
 					console.log("Error in getQueue");
@@ -249,7 +278,7 @@ exports.getGrid = function(req, res) {
 			return;
 		}
 	);*/
-	console.log(photos.inx);
+	/*console.log(photos.inx);
 	for (var i = photos.inx - 1; i >= 0; i--) {
 		photos.get(i.toString(), function(err,data) {
 			if (err) {
@@ -276,7 +305,7 @@ exports.getGrid = function(req, res) {
 				}
 			}
 		});
-	}
+	}*/
 };
 
 exports.getCount = function(req, res) {
