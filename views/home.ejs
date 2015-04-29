@@ -4,7 +4,7 @@
 <br>
 <div class="container">
 	<div id="gallery">
-
+		<div align="center"><h4>Loading...</h4></div>
 	</div>
 </div>
 <br>
@@ -15,12 +15,11 @@
 			console.log(data);
 			$("#gallery").text("");
 			for (var i = 0; i < data.length; i++) {
-				$("#gallery").append('<div class="panel panel-default" id="' + data[i].pID + '"><div class="panel-body"><div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" align="center" style="overflow:hidden;height:180px;padding-top:20px;">' + 
+				$("#gallery").append('<div class="panel panel-default" id="' + data[i].pId + '"><div class="panel-body"><div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" align="center" style="overflow:hidden;height:180px;padding-top:20px;">' + 
 					'<img src="' + data[i].url + '" style="height:100%;">'
 					+ '</div>' + 
 					'<div class="col-lg-8 col-md-6 col-sm-12 col-xs-12" align="center">' + 
-					'<br><button class="btn btn-success" id="a' + data[i].pID + '">Approve</button><br>' + 
-					'<br><button class="btn btn-danger" id="r' + data[i].pID + '">Reject</button>'
+					'<br><button class="btn btn-danger" id="r' + data[i].pId + '">Reject</button>'
 					+ '</div></div>');
 			}
 			$.get("/getCount", {}, function(data) {

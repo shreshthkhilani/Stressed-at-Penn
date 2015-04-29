@@ -36,13 +36,15 @@ var admins = new aws('admins');
 var hours = new aws('hours');
 var photos = new aws('photos');
 var count = new aws('count');
+var rejected = new aws('rejected');
 
 admins.init(function() {
 hours.init(function() {
 photos.init(function() {
 count.init(function() {
+rejected.init(function() {
 
-	routes.init(admins, hours, photos, count,
+	routes.init(admins, hours, photos, count, rejected,
 		function() {
 		
 		app.get( '/', routes.index );
@@ -69,6 +71,7 @@ count.init(function() {
 			  console.log( 'Open browser to http://localhost:' + app.get( 'port' ));
 			} );
 	});
+});
 });
 });
 });

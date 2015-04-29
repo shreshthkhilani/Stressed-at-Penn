@@ -14,12 +14,17 @@
 <script>
 	$(document).ready(function() {
 		$.get("/getGrid", {}, function(data) {
+			
+			data = data.sort(function(a,b) { 
+				return new Date(b.timestamp) - new Date(a.timestamp);
+			});
 			console.log(data);
 			$("#gallery").text("");
 			for (var i = 0; i < data.length; i++) {
-				$("#gallery").append('<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" align="center" style="overflow:hidden;height:180px;padding-top:20px;">' + 
-					'<img src="' + data[i] + '" style="height:100%;">' 
-					+ '</div>');
+				var current = new Date(data[i].timestamp);
+				$("#gallery").append('<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="padding-right:4px;padding-left:4px;"> <div align="center" style="overflow:hidden;height:168px;padding-top:8px;">' + 
+					'<img src="' + data[i].url + '" style="height:100%;"><br>' 
+					+ '</div></div>');
 			}
 			$.get("/getCount", {}, function(data) {
 				$("#count").text(data.count);
