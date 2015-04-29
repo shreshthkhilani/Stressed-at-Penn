@@ -84,3 +84,7 @@ html, body {
 .content-ff {
 	padding-bottom: 32px;
 }
+
+.form-group {
+	margin-bottom: 0 !important;
+}
