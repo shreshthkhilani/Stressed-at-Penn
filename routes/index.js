@@ -157,7 +157,7 @@ exports.getGrid = function(req, res) {
 	var returnDataPre = []
 	var returnData = [];
 	var count = inx;
-	var i = photos.inx - 1;
+	var i = photos.inx;
 
 	var arr = Array.apply(null, {length: i}).map(Number.call, Number);
 	console.log(arr.length);
