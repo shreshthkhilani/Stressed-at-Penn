@@ -157,7 +157,7 @@ exports.getGrid = function(req, res) {
 	var returnDataPre = []
 	var returnData = [];
 	var count = inx;
-	var i = photos.inx;
+	var i = photos.inx + 1;
 
 	var arr = Array.apply(null, {length: i}).map(Number.call, Number);
 	console.log(arr.length);
@@ -223,89 +223,6 @@ exports.getGrid = function(req, res) {
 			);
 		}
 	);
-
-	/*async.until(
-		function() {
-			return returnData.length == n;
-		}, 
-
-		function (callback) {
-			//console.log(i);
-			photos.get(i.toString(), function(err,data) {
-				if (err) {
-					console.log("Error in getQueue");
-					i--;
-					callback();
-				}
-				else {
-					if (data != null) {
-						rejected.exists(i.toString(), function(err2,data2) {
-							if (err2) {
-								console.log("Error 2 in getQueue");
-								i--;
-								callback();
-							}
-							else {
-								if (!data2) {
-									returnData.push(JSON.parse(data))
-									count--;
-									if(count == 0) {
-										//console.log(returnData);
-									    res.send(returnData);
-									    return;
-									}
-									i--;
-									callback();
-								}
-								else {
-									i--;
-									callback();
-								}
-							}
-						});
-					}
-					else {
-						i--;
-						callback();
-					}
-				}
-			});
-		},
-
-		function(){
-			console.log("hi");
-			res.send(returnData);
-			return;
-		}
-	);*/
-	/*console.log(photos.inx);
-	for (var i = photos.inx - 1; i >= 0; i--) {
-		photos.get(i.toString(), function(err,data) {
-			if (err) {
-				console.log("Error in getQueue");
-			}
-			else {
-				if (data != null) {
-					rejected.exists(i.toString(), function(err2,data2) {
-						if (err2) {
-							console.log("Error 2 in getQueue");
-						}
-						else {
-							if (!data2) {
-								returnData.push(JSON.parse(data))
-								count--;
-								if(count == 0) {
-									//console.log(returnData);
-								    res.send(returnData);
-								    return;
-								}
-							}
-						}
-					});
-				}
-			}
-		});
-	}*/
 };
 
 exports.getCount = function(req, res) {

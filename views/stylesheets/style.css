@@ -73,3 +73,14 @@ html, body {
 .row.like-well {
 	margin: 0;
 }
+
+.fixed-footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	position: fixed;
+}
+
+.content-ff {
+	padding-bottom: 32px;
+}
