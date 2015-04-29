@@ -9,6 +9,8 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var async = require('async');
 var multer  = require('multer');
+var fs = require('fs');
+var secretobj = JSON.parse(fs.readFileSync('secret.json', 'utf8'));
 
 app.use(multer({dest: './uploads/', includeEmptyFields: true}));
 app.set('port', process.env.PORT || 8080);
@@ -24,9 +26,9 @@ app.use(express.static(__dirname + '/views/js'));
 
 app.use(cookieParser());
 app.use(session({
-	secret: "thisISaSeCrEt",
+	secret: secretobj.secret,
 	login: false
-	}));
+}));
 
 /////////////////
 
