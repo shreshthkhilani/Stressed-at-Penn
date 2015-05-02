@@ -24,9 +24,13 @@
 				$("#gallery").text("");
 				for (var i = 0; i < data.length; i++) {
 					var current = new Date(data[i].timestamp);
-					$("#gallery").append('<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="padding-right:4px;padding-left:4px;"> <div align="center" style="overflow:hidden;height:168px;padding-top:8px;">' + 
-						'<img src="' + data[i].url + '" style="height:100%;"><br>' 
+					$("#gallery").append('<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="padding-right:4px;padding-left:4px;"> <div align="center" style="overflow:hidden;height:168px;padding-top:8px;">' +
+						'<a href="#img' + data[i].pId + '">' +  
+						'<img src="' + data[i].url + '" style="height:100%;"></a><br>' 
 						+ '</div></div>');
+					$("#gallery").append('<a href="#" class="lightbox"' + 
+						' id="img' + data[i].pId + '">' + 
+						'<img src="' + data[i].url + '"></a>');
 				}
 			});
 		});

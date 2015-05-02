@@ -262,7 +262,8 @@ exports.getGrid = function(req, res) {
 };
 
 exports.getCount = function(req, res) {
-	res.send({"count": photos.inx - rejected.inx});
+	res.send({"count": photos.inx});
+	//res.send({"count": photos.inx - rejected.inx});
 };
 
 exports.admin = function(req, res) {
