@@ -89,13 +89,8 @@ html, body {
 	margin-bottom: 0 !important;
 }
 
-/** LIGHTBOX MARKUP **/
-
 .lightbox {
-	/** Default lightbox to hidden */
 	display: none;
-
-	/** Position and style */
 	position: fixed;
 	z-index: 999;
 	width: 100%;
@@ -107,16 +102,12 @@ html, body {
 }
 
 .lightbox img {
-	/** Pad the lightbox image */
 	max-width: 90%;
 	max-height: 80%;
-	margin-top: 2%;
+	margin-top: 5%;
 }
 
 .lightbox:target {
-	/** Remove default browser outline */
 	outline: none;
-
-	/** Unhide lightbox **/
 	display: block;
 }
