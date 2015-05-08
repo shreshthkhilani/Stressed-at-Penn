@@ -188,7 +188,7 @@ exports.view = function(req, res) {
 };
 
 exports.getGrid = function(req, res) {
-	var n = 24;
+	var n = 72;
 	var inx = n;
 	var returnDataPre = []
 	var returnData = [];
